@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.gifBox{
+			width: 100%;
+		}
+		.gifBox .gif{
+			width: 120px;
+			height: 120px;
+		}
+	</style>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<div class="gifBox"></div>
+	<script>
+		function addGif(){
+			var gifArr = [
+			'http://img0.imgtn.bdimg.com/it/u=2993854109,3045519341&fm=117&gp=0.jpg',
+			'http://b.hiphotos.baidu.com/image/h%3D200/sign=b8e713eeba1bb0519024b428067bda77/d6ca7bcb0a46f21faf99419fff246b600d33ae48.jpg',
+			'http://img1.imgtn.bdimg.com/it/u=1811128710,3446574107&fm=23&gp=0.jpg',
+			'http://img1.imgtn.bdimg.com/it/u=3829179402,1373578103&fm=26&gp=0.jpg',
+			'http://img4.imgtn.bdimg.com/it/u=3540809201,1117045719&fm=26&gp=0.jpg',
+			'http://img4.imgtn.bdimg.com/it/u=2580131157,3271863611&fm=23&gp=0.jpg',
+			'http://img0.imgtn.bdimg.com/it/u=290704512,3776515098&fm=26&gp=0.jpg',
+			'http://img1.imgtn.bdimg.com/it/u=2663203680,3310615511&fm=26&gp=0.jpg',
+			'http://img0.imgtn.bdimg.com/it/u=120445937,2486235217&fm=26&gp=0.jpg',
+			'http://img2.imgtn.bdimg.com/it/u=1892033249,1239170349&fm=26&gp=0.jpg'
+			];
+			var num = 100;
+			var html = '';
+			for(var i=0; i<num; i++){
+				html += '<img class="gif" src="'+ gifArr[i%10] +'">';
+			}
+			$(".gifBox").html(html);
+		}
+		addGif();
+	</script>
+</body>
+</html>
